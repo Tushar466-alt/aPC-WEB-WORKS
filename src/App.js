@@ -30,13 +30,13 @@ function App() {
       {/* <AppRoutes /> */}
       <PCNavbar />
       <div
-        className="w-14 h-14 bg-[yellow] rounded-full text-black  fixed hover:bg-slate-950 hover:text-white z-20 bottom-[55px] right-12 flex items-center justify-center cursor-pointer"
+        className="w-14 h-14 bg-[yellow] rounded-full text-black  fixed hover:bg-[black] hover:text-[yellow] z-20 bottom-[55px] right-12 flex items-center justify-center cursor-pointer"
         onClick={() => setIsDialogOpen(true)}
       >
         <BsFillChatDotsFill className={`text-3xl`} />
       </div>
 
-      <div className="w-12 h-12 bg-slate-900 rounded-full text-white fixed hover:bg-slate-950 z-10 bottom-6 right-6 flex items-center justify-center cursor-pointer">
+      <div className="w-12 h-12 bg-[black] rounded-full text-[yellow] fixed hover:bg-[yellow] hover:drop-shadow-lg hover:border-black hover:text-[black] z-10 bottom-6 right-6 flex items-center justify-center cursor-pointer">
         <IoIosArrowUp className="text-2xl" />
       </div>
 

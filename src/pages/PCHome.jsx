@@ -1,8 +1,8 @@
 import React from "react";
-import PCServices from "../components/PCServices.jsx";
-import PCLProject from "../components/PCLProject.jsx";
-import PCPricing from "../components/PCPricing.jsx";
-import PCFooter from "../components/footer/PCFooter.jsx";
+import Services from "../components/Services.jsx";
+import LProject from "../components/LProject.jsx";
+import Pricing from "../components/Pricing.jsx";
+import Footer from "../components/footer/Footer.jsx";
 import {motion} from 'framer-motion';
 
 const PCHome = () => {
@@ -12,10 +12,10 @@ const PCHome = () => {
     animate= {{opacity: 1}}
     exit = {{opacity: 0}}
     transition = {{duration: 2}}>
-      <PCServices />
-      <PCLProject />
-      <PCPricing />
-      <PCFooter />
+      <Services />
+      <LProject />
+      <Pricing />
+      <Footer />
     </motion.div>
   );
 };

@@ -10,7 +10,7 @@ const PCPricing = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-1 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 gap-2 bg-green-200">
+      <div className="grid grid-cols-1 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 gap-2 bg-white">
         <div className="text-center">
           <span className="font-bold text-4xl text-gray-800 sm:text-3xl">
             Pricing
@@ -34,11 +34,11 @@ const PCPricing = () => {
                 whileTap={{ scale: 0.9 }}
                 whileInView={{ opacity: 1 }}
                 key={ind}
-                className="flex flex-wrap w-full bg-slate- text-center justify-center border border-black pb-6 shadow-md bg-white rounded-lg overflow-hidden"
+                className="flex flex-wrap w-full bg-slate- text-center justify-center  pb-6 shadow-md bg-white rounded-lg overflow-hidden"
               >
                 <span
                   className={`w-full py-4 text-2xl font-semibold ${
-                    item.id === 3 ? "bg-[#ff0000d6] text-white" : "bg-[yellow]"
+                    item.id === 3 ? "bg-[green] text-white" : "bg-[yellow]"
                   }`}
                 >
                   {item?.type}
@@ -49,28 +49,28 @@ const PCPricing = () => {
                   <span className="text-sm">/month</span>
                 </span>
                 <ul className="w-full px-14 lg:px-6 xl:px-10">
-                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-y-[1px]">
+                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-b-[1px] border-[black]">
                     Up to 100 users
                   </li>
-                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-y-[1px]">
+                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-b-[1px] border-[black]">
                     Theme update
                   </li>
-                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-y-[1px]">
+                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-b-[1px] border-[black]">
                     Support of forum
                   </li>
-                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-y-[1px]">
+                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-b-[1px] border-[black]">
                     Photoshop file
                   </li>
-                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans border-y-[1px]">
+                  <li className="py-4 md:py-[13px] lg:py-[9px] xl:py-[12px] lg:text-sm font-sans">
                     Customer support
                   </li>
                 </ul>
                 <button
-                  className={`border w-[65%] py-2 mt-10 text-base font-bold ${
-                    item.id === 3 ? "bg-[#ff0000d6] text-white" : "bg-[yellow]"
+                  className={`border w-[65%] py-2 mt-10 text-base font-bold border-none ${
+                    item.id === 3 ? "bg-[green] text-white" : "bg-[yellow]"
                   }`}
                 >
-                  Sing Up
+                  View More
                 </button>
               </motion.div>
             );

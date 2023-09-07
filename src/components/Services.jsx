@@ -57,13 +57,13 @@ const PCServices = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-1 py-10 gap-2 lg:gap-x-0 xl:gap-x-6 justify-items-center items-center md:grid-cols-2 gap-y-5 lg:grid-cols-3 lg:gap-2 lg:px-6 xl:grid-cols-3 xl:px-12 sm:px-4 md:px-4 bg-green-200">
+      <div className="grid grid-cols-1 py-10 gap-2 lg:gap-x-0 xl:gap-x-6 justify-items-center items-center md:grid-cols-2 gap-y-5 lg:grid-cols-3 lg:gap-2 lg:px-6 xl:grid-cols-3 xl:px-12 sm:px-4 md:px-4">
         {data?.map((item, ind) => {
           return (
             <div key={ind}>
-              <Card className="bg-[white] rounded-lg drop-shadow-lg">
+              <Card className="bg-[white] rounded-lg border border-[yellow]">
                 <div className="grid grid-cols-4">
-                  <div className="h-14 w-14 sm:h-14 sm:w-14 md:h-12 md:w-12 rounded-full items-center bg-[#ffff00a1] mt-2 flex flex-col justify-center">
+                  <div className="h-14 w-14 sm:h-14 sm:w-14 md:h-12 md:w-12 rounded-full items-center bg-[yellow] mt-2 flex flex-col justify-center">
                     <span className="font-bold text-[#1c1c1cce] text-[28px]">
                       {item.icon}
                     </span>

@@ -33,7 +33,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className="bg-lightGreen w-full flex justify-between p-4 md:px-8 md:py-4 items-center lg:py-3 xl:py-4 shadow-md lg:px-16 xl:px-16 border-b-2">
+      <div className="bg-[#1c1c1ce8] w-full flex justify-between p-4 md:px-8 md:py-4 items-center lg:py-3 xl:py-4 shadow-md lg:px-16 xl:px-16 border-b-2">
         <div className="text-md block lg:hidden xl:hidden">
           {toggle ? (
             <LuX
@@ -50,8 +50,8 @@ const Navbar = () => {
 
         <div className="md:text-2xl lg:text-2xl xl:text-2xl">
           <span className="font-extrabold">
-            <sup className="drop-shadow-md">a</sup>
-            <span className="text-[yellow] drop-shadow-md">PC WEB WORKS</span>
+            <sup className="drop-shadow-md text-white">a</sup>
+            <span className="text-[yellow] shadow-yellow-400">PC WEB WORKS</span>
           </span>
         </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                       toggle ? "block" : "hidden"
                     }`}
         >
-          <ul className="lg:flex lg:justify-between xl:flex xl:justify-between text-[#1c1c1ce8] font-[600]">
+          <ul className="lg:flex lg:justify-between xl:flex xl:justify-between text-[yellow] font-[600]">
             <li className="py-[6px] px-2 md:px-[20px] md:py-[10px] sm:my-[4px] md:my-[4px] sm:flex sm:justify-between md:flex md:justify-between lg:mx-6 xl:mx-6">
               <Link to="/">Home</Link>
               <MdKeyboardArrowDown className="sm:text-[14px] md:text-[14px] lg:hidden xl:hidden" />

@@ -1,10 +1,134 @@
 import React from "react";
-import PCPricing from "../PCPricing";
+import PCPricing from "../Pricing";
 
 const StaticPakage = () => {
+  let formData = [
+    {
+      id: 1,
+      title: "Home Page",
+      basic: "✔",
+      corporate: "✔",
+      creative: "✔",
+      extraCreative: "✔",
+    },
+    {
+      id: 2,
+      title: "Number of Pages",
+      basic: "5",
+      corporate: "7",
+      creative: "15",
+      extraCreative: "20",
+    },
+    {
+      id: 3,
+      title: "Design Quality",
+      basic: "Basic",
+      corporate: "Business",
+      creative: "Creative",
+      extraCreative: "Extra Creative",
+    },
+    {
+      id: 4,
+      title: "Navigation system",
+      basic: "✔",
+      corporate: "✔",
+      creative: "✔",
+      extraCreative: "✔",
+    },
+    {
+      id: 5,
+      title: "Domain",
+      basic: "-",
+      corporate: "Domain(.in)",
+      creative: "Domain(.com)",
+      extraCreative: "Domain (.com/.in/.net/.org)",
+    },
+    {
+      id: 6,
+      title: "Web space (Free for 1 year)",
+      basic: "-",
+      corporate: "300MB",
+      creative: "500MB",
+      extraCreative: "700MB",
+    },
+    {
+      id: 7,
+      title: "Number of Email Id",
+      basic: "-",
+      corporate: "1",
+      creative: "2",
+      extraCreative: "5",
+    },
+    {
+      id: 8,
+      title: "Inquiry Page",
+      basic: "1",
+      corporate: "1",
+      creative: "1",
+      extraCreative: "1",
+    },
+    {
+      id: 9,
+      title: "Mobile Tablet friendly",
+      basic: "-",
+      corporate: "✔",
+      creative: "✔",
+      extraCreative: "✔",
+    },
+    {
+      id: 10,
+      title: "Social media link integration",
+      basic: "-",
+      corporate: "-",
+      creative: "✔",
+      extraCreative: "✔",
+    },
+    {
+      id: 11,
+      title: "Google Map integration",
+      basic: "-",
+      corporate: "-",
+      creative: "✔",
+      extraCreative: "✔",
+    },
+    {
+      id: 12,
+      title: "Live chat integration",
+      basic: "-",
+      corporate: "-",
+      creative: "-",
+      extraCreative: "✔",
+    },
+    {
+      id: 13,
+      title: "Whatsapp integration",
+      basic: "-",
+      corporate: "-",
+      creative: "-",
+      extraCreative: "✔",
+    },
+    {
+      id: 14,
+      title: "Extra Pages",
+      basic: "Rs.500 for Each page",
+      corporate: "Rs.500 for Each page",
+      creative: "Rs.500 for Each page",
+      extraCreative: "Rs.500 for Each page",
+    },
+    {
+      id: 15,
+      title: "SSL",
+      basic: "-",
+      corporate: "-",
+      creative: "-",
+      extraCreative: "✔",
+    },
+    
+  ];
+
   return (
     <div>
-      <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-green-100">
+      <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-white">
         <div className="text-center">
           <span className="font-bold text-4xl text-gray-800 sm:text-3xl">
             What is static website?
@@ -26,12 +150,12 @@ const StaticPakage = () => {
             static website design packages as per your requirements and budget.
           </p>
         </div>
-
-        <span className="font-bold text-4xl text-gray-800 sm:text-3xl text-center mt-14">
+        <hr className="border-[2px] border-[yellow] mt-8" />
+        <span className="font-bold text-4xl text-gray-800 sm:text-3xl text-center">
           Cost of Static Website Design
         </span>
 
-        <table className="border border-gray-400 border-t-[red] border-collapse table-auto">
+        <table className="border border-gray-400 border-t-[red] border-collapse table-auto text-center">
           <thead>
             <tr>
               <th className="border border-slate-300 text-left">Packeges</th>
@@ -53,33 +177,25 @@ const StaticPakage = () => {
           </thead>
           <tbody>
             <tr>
-              <td className="border border-slate-300 text-left" colSpan="5">-</td>
+              <th className="border border-slate-300 text-left" colSpan="5">
+                <span>Get started easily</span>
+              </th>
             </tr>
-            <tr>
-              <td className="border border-slate-300 text-left">-</td>
-              <td className="border border-slate-300">-</td>
-              <td className="border border-slate-300">-</td>
-              <td className="border border-slate-300">-</td>
-              <td className="border border-slate-300">-</td>
-            </tr>
-            <tr>
-              <td className="border border-slate-300 text-left">
-                Witchy Woman
-              </td>
-              <td className="border border-slate-300">The Eagles</td>
-              <td className="border border-slate-300">1972</td>
-              <td className="border border-slate-300">1972</td>
-              <td className="border border-slate-300">1972</td>
-            </tr>
-            <tr>
-              <td className="border border-slate-300 text-left">
-                Shining Star
-              </td>
-              <td className="border border-slate-300">Earth, Wind, and Fire</td>
-              <td className="border border-slate-300">1975</td>
-              <td className="border border-slate-300">1975</td>
-              <td className="border border-slate-300">1975</td>
-            </tr>
+            {formData?.map((item, ind) => {
+              return (
+                <tr key={ind} className="font-medium text-xs">
+                  <td className="border border-slate-300 text-left py-3 px-2">
+                    {item.title}
+                  </td>
+                  <td className="border border-slate-300">{item.basic}</td>
+                  <td className="border border-slate-300">{item.corporate}</td>
+                  <td className="border border-slate-300">{item.creative}</td>
+                  <td className="border border-slate-300">
+                    {item.extraCreative}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

@@ -30,37 +30,37 @@ const PCLProject = () => {
     {
       id: 1,
       name: "",
-      url: "https://okab.pixeldima.com/wp-content/uploads/2016/04/project-1.jpg",
+      url: "https://whitekube.pt/wp-content/uploads/2019/08/ecommerce-1.png",
       alt: "",
     },
     {
       id: 2,
       name: "",
-      url: "https://okab.pixeldima.com/wp-content/uploads/2016/04/project-12.jpg",
+      url: "https://localpropeller.ca/wp-content/uploads/2016/04/eCommerce-Icon-01.png",
       alt: "",
     },
     {
       id: 3,
       name: "",
-      url: "https://okab.pixeldima.com/wp-content/uploads/2016/04/project-9.jpg",
+      url: "https://webdesignkl.my/wp-content/uploads/2020/08/ecommerce-2048x1363.png",
       alt: "",
     },
     {
       id: 4,
       name: "",
-      url: "https://okab.pixeldima.com/wp-content/uploads/2016/04/project-6.jpg",
+      url: "https://www.wisertechsolutions.ca/wp-content/uploads/2019/05/ecom.png",
       alt: "",
     },
   ];
 
   return (
     <>
-      <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-white">
+      <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[black]">
         <div className="text-center">
-          <span className="font-bold text-4xl text-gray-800 sm:text-3xl">
+          <span className="font-bold text-4xl text-[yellow] sm:text-3xl">
             Latest Project
           </span>
-          <p className="px-2 mx-auto mt-2 text-gray-600 py-4 text-[14px] font-semibold tracking-tight lg:w-[50%] xl:w-[50%]">
+          <p className="px-2 mx-auto mt-2 text-[yellow] py-4 text-[14px] font-semibold tracking-tight lg:w-[50%] xl:w-[50%]">
             Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
             sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
             nec sagittis sem nibh id elit.
@@ -74,8 +74,8 @@ const PCLProject = () => {
                 <Button
                   key={ind}
                   className={`${
-                    isActive == item.children ? "bg-[yellow]" : "bg-slate-50"
-                  } border hover:bg-[yellow] hover:text-black text-black font-bold py-1 px-1 mx-2 w-[112px]`}
+                    isActive == item.children ? "bg-[yellow]" : "bg-[black] border border-[yellow] text-[yellow]"
+                  } hover:bg-[yellow] hover:text-black hover:text-black font-bold py-1 px-1 mx-2 w-[112px]`}
                   onClick={() => buttonHandler(item.children)}
                 >
                   {item.children}
@@ -85,10 +85,10 @@ const PCLProject = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:grid-cols-4 xl:grid-cols-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:grid-cols-4 xl:grid-cols-4 bg-[white]] ">
           {imageObj?.map((item, ind) => {
             return (
-              <div key={ind}>
+              <div key={ind} className="bg-[yellow]">
                 <img className="w-full h-full" src={item.url} alt={item.alt} title={item.title} />
               </div>
             );
