@@ -48,22 +48,22 @@ const Footer = () => {
           </p>
           <ul className="flex justify-start mt-3 ml-[6px]">
             <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="#">
+              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
                 <BsInstagram />
               </a>
             </li>
             <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="#">
+              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
                 <BsFacebook />
               </a>
             </li>
             <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="#">
+              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
                 <BsLinkedin />
               </a>
             </li>
             <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="#">
+              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
                 <BsWhatsapp />
               </a>
             </li>
@@ -120,7 +120,7 @@ const Footer = () => {
       <div className="text-center bg-[yellow] text-black font-bold py-4 text-xs">
         <span>
           Copyright &copy; 2021 &nbsp;
-          <a>
+          <a href="www.google.com">
             <sup>a</sup>PC WEB WORKS 2023!
           </a>
         </span>

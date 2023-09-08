@@ -48,8 +48,8 @@ function App() {
                 <div
                   key={ind}
                   className={`w-[40px] h-[40px] rounded-[100%] overflow-hidden border-white border-2 flex justify-center items-center ${
-                    item.id == 2 && "relative right-5 bg-violet-300"
-                  } ${item.id == 3 && "relative right-10 bg-yellow-300"}`}
+                    item.id === 2 && "relative right-5 bg-violet-300"
+                  } ${item.id === 3 && "relative right-10 bg-yellow-300"}`}
                 >
                   <img
                     src={item.avatar}
@@ -79,7 +79,7 @@ function App() {
           </div>
           <div className="p-2 bg-green-100 flex flex-row">
             <div className="w-7 h-7 rounded-full overflow-hidden">
-              <img src={user[1].avatar} />
+              <img src={user[1].avatar} alt="Avtar" />
             </div>
             <div className="text-sm ml-3 text-black flex flex-col ">
               {messages?.map((message, index) => (
