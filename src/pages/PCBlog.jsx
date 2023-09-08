@@ -1,10 +1,11 @@
 import React from 'react'
 import Footer from '../components/footer/Footer'
+import PCComingsoon from './PCComingsoon'
 
 const PCBlog = () => {
   return (
     <div>
-      <h1>Blog</h1>
+      <PCComingsoon />
       <Footer />
     </div>
   )

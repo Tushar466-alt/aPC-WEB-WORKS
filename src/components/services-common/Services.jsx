@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from "./common/Card";
+import Card from "../common/Card";
 
 import {
   LuLightbulb,
@@ -61,7 +61,7 @@ const PCServices = () => {
         {data?.map((item, ind) => {
           return (
             <div key={ind}>
-              <Card className="bg-[white] rounded-lg border border-[yellow]">
+              <Card className="bg-[white] rounded-lg border">
                 <div className="grid grid-cols-4">
                   <div className="h-14 w-14 sm:h-14 sm:w-14 md:h-12 md:w-12 rounded-full items-center bg-[yellow] mt-2 flex flex-col justify-center">
                     <span className="font-bold text-[#1c1c1cce] text-[28px]">
@@ -72,7 +72,7 @@ const PCServices = () => {
                     <span className="font-bold text-[#1c1c1cce] text-[18px]">
                       {item.heading}
                     </span>
-                    <p className="py-2 leading-5 tracking-normal font-sans text-sm font-normal md:leading-6 text-[13px] xl:text-justify text-gray-400">
+                    <p className="py-2 leading-5 tracking-normal font-sans text-xs opacity-90 font-semibold md:leading-6 text-[13px] xl:text-justify text-black">
                       {item.paragraph}
                     </p>
                   </div>

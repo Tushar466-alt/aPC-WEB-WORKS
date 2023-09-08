@@ -57,10 +57,10 @@ const PCLProject = () => {
     <>
       <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[black]">
         <div className="text-center">
-          <span className="font-bold text-4xl text-[yellow] sm:text-3xl">
+          <span className="font-bold text-4xl text-[white] sm:text-3xl">
             Latest Project
           </span>
-          <p className="px-2 mx-auto mt-2 text-[yellow] py-4 text-[14px] font-semibold tracking-tight lg:w-[50%] xl:w-[50%]">
+          <p className="px-2 mx-auto mt-2 text-[white] py-4 text-[14px] font-semibold tracking-tight lg:w-[50%] xl:w-[50%]">
             Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
             sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
             nec sagittis sem nibh id elit.
@@ -74,8 +74,8 @@ const PCLProject = () => {
                 <Button
                   key={ind}
                   className={`${
-                    isActive == item.children ? "bg-[yellow]" : "bg-[black] border border-[yellow] text-[yellow]"
-                  } hover:bg-[yellow] hover:text-black hover:text-black font-bold py-1 px-1 mx-2 w-[112px]`}
+                    isActive == item.children ? "bg-[yellow]" : "bg-[black] border border-[yellow] text-white"
+                  } hover:bg-[yellow] hover:text-black font-bold py-1 px-1 mx-2 w-[112px]`}
                   onClick={() => buttonHandler(item.children)}
                 >
                   {item.children}

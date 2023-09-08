@@ -37,45 +37,45 @@ const Navbar = () => {
         <div className="text-md block lg:hidden xl:hidden">
           {toggle ? (
             <LuX
-              className="cursor-pointer opacity-70 text-xl md:text-3xl"
+              className="cursor-pointer text-4xl text-white"
               onClick={() => setToggle(!toggle)}
             />
           ) : (
             <LuAlignJustify
-              className="cursor-pointer opacity-70 text-xl md:text-3xl"
+              className="cursor-pointer text-4xl text-white"
               onClick={() => setToggle(!toggle)}
             />
           )}
         </div>
 
-        <div className="md:text-2xl lg:text-2xl xl:text-2xl">
+        <div className="text-2xl">
           <span className="font-extrabold">
             <sup className="drop-shadow-md text-white">a</sup>
-            <span className="text-[yellow] shadow-yellow-400">PC WEB WORKS</span>
+            <span className="text-[yellow]">PC WEB WORKS</span>
           </span>
         </div>
 
         <nav
-          className={`absolute sm:top-11 sm:left-0 md:left-0
+          className={`absolute sm:top-20 sm:left-0 md:left-0 sm:h-screen md:h-screen
                       sm:w-full md:w-full sm:text-[14px] md:text-[16px] sm:font-semibold md:font-semibold 
                     sm:bg-white md:bg-white sm:py-0 md:py-1 md:top-16 lg:static xl:static lg:flex xl:flex lg:text-sm xl:text-sm ${
                       toggle ? "block" : "hidden"
                     }`}
         >
-          <ul className="lg:flex lg:justify-between xl:flex xl:justify-between text-[yellow] font-[600]">
-            <li className="py-[6px] px-2 md:px-[20px] md:py-[10px] sm:my-[4px] md:my-[4px] sm:flex sm:justify-between md:flex md:justify-between lg:mx-6 xl:mx-6">
+          <ul className="lg:flex lg:justify-between xl:flex xl:justify-between text-[yellow] sm:text-black md:text-black font-[600]">
+            <li className="py-[6px] px-6 sm:my-4 md:px-[20px] md:py-[10px] md:my-[4px] sm:text-xl md:text-xl sm:flex sm:justify-between md:flex md:justify-between lg:mx-6 xl:mx-6">
               <Link to="/">Home</Link>
-              <MdKeyboardArrowDown className="sm:text-[14px] md:text-[14px] lg:hidden xl:hidden" />
+              {/* <MdKeyboardArrowDown className="sm:text-[14px] md:text-[14px] lg:hidden xl:hidden" /> */}
             </li>
 
             {menuItem?.map((item, ind) => {
               return (
                 <li
                   key={ind}
-                  className="py-[6px] px-2 md:px-[20px] md:py-[10px] sm:my-[4px] md:my-[4px] sm:flex sm:justify-between md:flex md:justify-between lg:mx-6 xl:mx-6"
+                  className="py-[6px] px-6 sm:my-4 md:px-[20px] md:py-[10px] md:my-[4px] sm:text-xl md:text-xl sm:flex sm:justify-between md:flex md:justify-between lg:mx-6 xl:mx-6"
                 >
                   <Link to={`/${item.value}`}>{item.name}</Link>
-                  <MdKeyboardArrowDown className="sm:text-[14px] md:text-[14px] lg:hidden xl:hidden" />
+                  {/* <MdKeyboardArrowDown className="sm:text-[14px] md:text-[14px] lg:hidden xl:hidden" /> */}
                 </li>
               );
             })}

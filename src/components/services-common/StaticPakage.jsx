@@ -128,7 +128,7 @@ const StaticPakage = () => {
 
   return (
     <div>
-      <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-white">
+      <div className="grid grid-col-1 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-white">
         <div className="text-center">
           <span className="font-bold text-4xl text-gray-800 sm:text-3xl">
             What is static website?
@@ -151,46 +151,46 @@ const StaticPakage = () => {
           </p>
         </div>
         <hr className="border-[2px] border-[yellow] mt-8" />
-        <span className="font-bold text-4xl text-gray-800 sm:text-3xl text-center">
+        <span className="font-bold text-4xl text-gray-800 sm:text-3xl text-center mt-10">
           Cost of Static Website Design
         </span>
 
-        <table className="border border-gray-400 border-t-[red] border-collapse table-auto text-center">
+        <table className="border border-gray-400 border-t-[red] border-collapse table-auto text-center mt-10">
           <thead>
-            <tr>
-              <th className="border border-slate-300 text-left">Packeges</th>
-              <th className="border border-slate-300">Basic</th>
-              <th className="border border-slate-300">Corporate</th>
-              <th className="border border-slate-300">Creative</th>
-              <th className="border border-slate-300">Extra Creative</th>
+            <tr className="bg-[#ffff0023]">
+              <th className="border border-gray-200 text-left py-3 px-2">Packeges</th>
+              <th className="border border-gray-200">Basic</th>
+              <th className="border border-gray-200">Corporate</th>
+              <th className="border border-gray-200">Creative</th>
+              <th className="border border-gray-200">Extra Creative</th>
             </tr>
           </thead>
 
           <thead>
             <tr>
-              <th className="border border-slate-300 text-left">Price</th>
-              <th className="border border-slate-300">2999/-</th>
-              <th className="border border-slate-300">4999/-</th>
-              <th className="border border-slate-300">19999/-</th>
-              <th className="border border-slate-300">29999/-</th>
+              <th className="border border-gray-200 text-left py-3 px-2">Price</th>
+              <th className="border border-gray-200">2999/-</th>
+              <th className="border border-gray-200">4999/-</th>
+              <th className="border border-gray-200">19999/-</th>
+              <th className="border border-gray-200">29999/-</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th className="border border-slate-300 text-left" colSpan="5">
+            <tr className="bg-[yellow]">
+              <th className="border border-gray-200 text-left py-4 px-2" colSpan="5">
                 <span>Get started easily</span>
               </th>
             </tr>
             {formData?.map((item, ind) => {
               return (
                 <tr key={ind} className="font-medium text-xs">
-                  <td className="border border-slate-300 text-left py-3 px-2">
+                  <td className="border border-gray-200 text-left py-3 px-2">
                     {item.title}
                   </td>
-                  <td className="border border-slate-300">{item.basic}</td>
-                  <td className="border border-slate-300">{item.corporate}</td>
-                  <td className="border border-slate-300">{item.creative}</td>
-                  <td className="border border-slate-300">
+                  <td className="border border-gray-200">{item.basic}</td>
+                  <td className="border border-gray-200">{item.corporate}</td>
+                  <td className="border border-gray-200">{item.creative}</td>
+                  <td className="border border-gray-200">
                     {item.extraCreative}
                   </td>
                 </tr>
