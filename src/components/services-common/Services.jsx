@@ -71,7 +71,7 @@ const PCServices = () => {
                     <span className="font-bold text-[#1c1c1cce] text-[18px]">
                       {item.heading}
                     </span>
-                    <p className="py-2 leading-5 tracking-normal font-sans text-xs opacity-90 font-semibold md:leading-6 text-[13px] xl:text-justify text-black">
+                    <p className="py-2 leading-5 tracking-normal font-sans text-xs font-semibold md:leading-6 text-[13px] xl:text-justify text-black">
                       {item.paragraph}
                     </p>
                   </div>

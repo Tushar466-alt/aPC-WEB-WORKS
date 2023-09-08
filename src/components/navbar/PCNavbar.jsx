@@ -56,13 +56,13 @@ const Navbar = () => {
         </div>
 
         <nav
-          className={`absolute sm:top-20 sm:left-0 md:left-0 sm:h-screen md:h-screen
-                      sm:w-full md:w-full sm:text-[14px] md:text-[16px] sm:font-semibold md:font-semibold 
-                    sm:bg-white md:bg-white sm:py-0 md:py-1 md:top-16 lg:static xl:static lg:flex xl:flex lg:text-sm xl:text-sm ${
+          className={`absolute sm:top-[67px] sm:left-0 md:left-0 sm:h-[400px] md:h-[400px]
+                      sm:w-screen md:w-screen sm:text-[14px] md:text-[16px] sm:font-semibold md:font-semibold 
+                    sm:bg-black md:bg-black sm:py-0 md:py-1 md:top-16 lg:static xl:static lg:flex xl:flex lg:text-sm xl:text-sm ${
                       toggle ? "block" : "hidden"
                     }`}
         >
-          <ul className="lg:flex lg:justify-between xl:flex xl:justify-between text-[yellow] sm:text-black md:text-black font-[600]">
+          <ul className="lg:flex lg:justify-between xl:flex xl:justify-between text-[yellow] sm:text-white md:text-white font-[600]">
             <li className="py-[6px] px-6 sm:my-4 md:px-[20px] md:py-[10px] md:my-[4px] sm:text-xl md:text-xl sm:flex sm:justify-between md:flex md:justify-between lg:mx-6 xl:mx-6">
               <Link to="/">Home</Link>
               {/* <MdKeyboardArrowDown className="sm:text-[14px] md:text-[14px] lg:hidden xl:hidden" /> */}
