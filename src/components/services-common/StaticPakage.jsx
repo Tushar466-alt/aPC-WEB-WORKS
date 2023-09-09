@@ -1,5 +1,4 @@
 import React from "react";
-import PCPricing from "../Pricing";
 
 const StaticPakage = () => {
   let formData = [

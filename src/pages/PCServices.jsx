@@ -1,5 +1,5 @@
 
-import Card from "../components/common/Card";
+import Card from "../components/comman/Card";
 
 import {
   LuLightbulb,

@@ -6,11 +6,12 @@ import PCContactUs from "../../pages/PCContactUs";
 import PCBlog from "../../pages/PCBlog";
 import PCPortfolio from "../../pages/PCServices";
 import { LuAlignJustify, LuX } from "react-icons/lu";
-import { MdKeyboardArrowDown } from "react-icons/md";
+// import { MdKeyboardArrowDown } from "react-icons/md";
 
 const PCNavbar = () => {
   return (
-    <Router>
+    <div>
+      <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<PCHome />} />
@@ -20,6 +21,7 @@ const PCNavbar = () => {
         <Route path="/contactUs" element={<PCContactUs />} />
       </Routes>
     </Router>
+    </div>
   );
 };
 

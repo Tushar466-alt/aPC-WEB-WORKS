@@ -9,16 +9,16 @@ const AboutWhatWeDo = () => {
           <img
             src="https://www.wisertechsolutions.ca/wp-content/uploads/2019/05/ecom.png"
             className="w-full"
-            title="Image"
-            alt="Image"
+            title="pc web works"
+            alt="pc web works"
           />
         </div>
         <div className="flex justify-center items-center mx-1 border">
           <img
             src="https://localpropeller.ca/wp-content/uploads/2016/04/eCommerce-Icon-01.png"
             className="w-full"
-            title="Image"
-            alt="Image"
+            title="pc web works"
+            alt="pc web works"
           />
         </div>
         {/* </div> */}
@@ -34,10 +34,11 @@ const AboutWhatWeDo = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
-            <br /> 
-            <br /> 
-            &nbsp; &nbsp;&nbsp;&nbsp; Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <br />
+            <br />
+            &nbsp; &nbsp;&nbsp;&nbsp; Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
           </p>
           <button className="border border-black px-6 py-3 mt-8 font-bold hover:bg-black hover:text-white hover:duration-500 lg:mt-4 lg:py-2 lg:px-4 ">
             OUR WORKS

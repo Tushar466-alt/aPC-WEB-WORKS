@@ -1,7 +1,5 @@
 import React from "react";
 import Services from "../components/services-common/Services";
-import LProject from "../components/LProject.jsx";
-import Pricing from "../components/Pricing.jsx";
 import Footer from "../components/footer/Footer.jsx";
 
 const PCHome = () => {
@@ -20,8 +18,6 @@ const PCHome = () => {
     <>
       <div>
         <Services />
-        <LProject />
-        <Pricing />
         <Footer />
       </div>
     </>
