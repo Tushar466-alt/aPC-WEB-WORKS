@@ -9,7 +9,7 @@ const PCComingsoon = () => {
         <span className='text-2xl font-bold'>Coming Soon!</span>
         <div className="flex justify-center mt-4">
             <hr className="border-b-1 border-gray-500 w-[100px]" />
-            <div className="w-[14px] h-[14px] bg-[yellow] rounded-sm relative top-[-7px] mx-3"></div>
+            <div className="w-[14px] h-[14px] bg-[yellow] rounded-sm mt-[-7px] mx-3"></div>
             <hr className="border-b-1 border-gray-500 w-[100px]" />
           </div>
           <span className='text-sm font-bold mt-4'>Work in progress... We will be back in.</span>

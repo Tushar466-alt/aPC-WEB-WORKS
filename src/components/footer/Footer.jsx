@@ -1,5 +1,6 @@
 import React from "react";
 import { BsInstagram, BsFacebook, BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import Component from "../comman/Components";
 
 const Footer = () => {
   let tags = [
@@ -34,7 +35,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="grid sm:grid-rows-4 md:grid-rows-4 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[black] text-[white] lg:grid-cols-4 xl:grid-cols-4 text-xs">
+      <Component className="grid sm:grid-rows-4 md:grid-rows-4 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[#252525] text-[white] lg:grid-cols-4 xl:grid-cols-4 text-xs">
         <div className="p-4 my-auto lg:my-0 xl:my-0">
           <span className="font-bold text-2xl ml-[8px]">
             <sup>a</sup>
@@ -115,7 +116,7 @@ const Footer = () => {
             })}
           </ul>
         </div>
-      </div>
+      </Component>
 
       <div className="text-center bg-[yellow] text-black font-bold py-4 text-xs">
         <span>
