@@ -10,7 +10,7 @@ import {
   LuMessagesSquare,
 } from "react-icons/lu";
 import Footer from "../components/footer/Footer";
-import StaticPakage from "../components/services-common/StaticPakage";
+import StaticPricing from "../components/pricing-plane/StaticPricing";
 
 const PCServices = () => {
   let data = [
@@ -85,7 +85,7 @@ const PCServices = () => {
         })}
       </div>
 
-      <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[black]">
+      {/* <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[black]">
         <div className="text-center">
           <span className="font-bold text-4xl text-[yellow] sm:text-3xl">
             What Our Clients Say
@@ -101,8 +101,8 @@ const PCServices = () => {
             nec sagittis sem nibh id elit.
           </p>
         </div>
-      </div>
-      <StaticPakage />
+      </div> */}
+      <StaticPricing />
       <Footer />
     </>
   );

@@ -1,11 +1,43 @@
+import React, { useState, useEffect } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 
-const UpScrollArrow = () => {
-    return (
-      <div className="w-12 h-12 bg-[black] rounded-full text-[yellow] fixed hover:bg-[yellow] hover:drop-shadow-lg hover:border-black hover:text-[black] z-10 bottom-6 right-6 flex items-center justify-center cursor-pointer">
-        <IoIosArrowUp className="text-2xl" />
-      </div>
-    );
+const ScrollToTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
   };
 
-  export default UpScrollArrow;
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <>
+      {isVisible && (
+        <button
+          className="w-12 h-12 bg-[black] rounded-full text-[yellow] fixed hover:bg-[yellow] hover:drop-shadow-lg hover:border-black hover:text-[black] z-10 bottom-6 right-6 flex items-center justify-center cursor-pointer"
+          onClick={scrollToTop}
+        >
+          <IoIosArrowUp className="text-2xl" />
+        </button>
+      )}
+    </>
+  );
+};
+
+export default ScrollToTopButton;

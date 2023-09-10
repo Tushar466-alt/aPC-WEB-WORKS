@@ -1,6 +1,6 @@
 import React from "react";
 
-const StaticPakage = () => {
+const StaticPricing = () => {
   let formData = [
     {
       id: 1,
@@ -122,9 +122,10 @@ const StaticPakage = () => {
       creative: "-",
       extraCreative: "✔",
     },
-    
   ];
 
+  const tab = ["basic", "Corporate", "Creative", "Extra Creative"]
+  // const filteredData = formData.filter((item) => item === selectedTab);
   return (
     <div>
       <div className="grid grid-col-1 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-white">
@@ -144,7 +145,7 @@ const StaticPakage = () => {
             the user who will take static website will not able able to edit the
             website without any web design knowledge. As it required HTML, CSS
             and javascript coding to understand the changes. If you want content
-            editable website then visit our Dynamic Website Packages. At FODUU,
+            editable website then visit our Dynamic Website Packages. At apc web works,
             we are a static website design company in India provide various
             static website design packages as per your requirements and budget.
           </p>
@@ -155,23 +156,24 @@ const StaticPakage = () => {
         </span>
 
         <table className="border border-gray-400 border-t-[red] border-collapse table-auto text-center mt-10">
-          <thead>
+          <thead className="sm:relative sm:top-[-20px]">
             <tr className="bg-[#ffff0023]">
-              <th className="border border-gray-200 text-left py-3 px-2">Packeges</th>
-              <th className="border border-gray-200">Basic</th>
-              <th className="border border-gray-200">Corporate</th>
-              <th className="border border-gray-200">Creative</th>
-              <th className="border border-gray-200">Extra Creative</th>
+              <th className="border border-gray-200 text-left py-3 px-2 sm:hidden lg:w-[25%] zl:w-[25%]">Packeges</th>
+              {tab?.map((item, ind) => {
+                return(
+                  <th className="border border-gray-200 sm:w-[25%] md:w-[25%] w-[15%] sm:text-sm sm:py-1">{item}</th>
+                )
+              })}
             </tr>
           </thead>
 
-          <thead>
+          <thead className="border sm:border-t-2">
             <tr>
               <th className="border border-gray-200 text-left py-3 px-2">Price</th>
               <th className="border border-gray-200">2999/-</th>
-              <th className="border border-gray-200">4999/-</th>
-              <th className="border border-gray-200">19999/-</th>
-              <th className="border border-gray-200">29999/-</th>
+              <th className="border border-gray-200 sm:hidden md:hidden">4999/-</th>
+              <th className="border border-gray-200 sm:hidden md:hidden">19999/-</th>
+              <th className="border border-gray-200 sm:hidden md:hidden">29999/-</th>
             </tr>
           </thead>
           <tbody>
@@ -187,9 +189,9 @@ const StaticPakage = () => {
                     {item.title}
                   </td>
                   <td className="border border-gray-200">{item.basic}</td>
-                  <td className="border border-gray-200">{item.corporate}</td>
-                  <td className="border border-gray-200">{item.creative}</td>
-                  <td className="border border-gray-200">
+                  <td className="border border-gray-200 sm:hidden md:hidden">{item.corporate}</td>
+                  <td className="border border-gray-200 sm:hidden md:hidden">{item.creative}</td>
+                  <td className="border border-gray-200 sm:hidden md:hidden">
                     {item.extraCreative}
                   </td>
                 </tr>
@@ -202,4 +204,7 @@ const StaticPakage = () => {
   );
 };
 
-export default StaticPakage;
+export default StaticPricing;
+
+
+
