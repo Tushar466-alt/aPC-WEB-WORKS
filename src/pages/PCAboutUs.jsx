@@ -7,7 +7,7 @@ const PCAboutUs = () => {
   return (
     <div>
       <AboutUsWelCome />
-      <Quickview />
+      {/* <Quickview /> */}
       <AboutWhatWeDo />
     </div>
   )

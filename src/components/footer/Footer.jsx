@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
     <>
-      <Component className="grid sm:grid-rows-4 md:grid-rows-4 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[#252525] text-[white] lg:grid-cols-4 xl:grid-cols-4 text-xs">
+      <Component className="grid sm:grid-rows-4 md:grid-rows-4 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[#252525] text-[#707070] lg:grid-cols-4 xl:grid-cols-4 text-xs">
         <div className="p-4 my-auto lg:my-0 xl:my-0">
           <span className="font-bold text-2xl ml-[8px]">
             <sup>a</sup>
@@ -48,23 +48,23 @@ const Footer = () => {
             vel rem voluptates!
           </p>
           <ul className="flex justify-start mt-3 ml-[6px]">
-            <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
+            <li className="border border-[#707070] p-1 rounded-sm m-[2px]">
+              <a className="text-2xl" href="www.google.com">
                 <BsInstagram />
               </a>
             </li>
-            <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
+            <li className="border border-[#707070] p-1 rounded-sm m-[2px]">
+              <a className="text-2xl" href="www.google.com">
                 <BsFacebook />
               </a>
             </li>
-            <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
+            <li className="border border-[#707070] p-1 rounded-sm m-[2px]">
+              <a className="text-2xl" href="www.google.com">
                 <BsLinkedin />
               </a>
             </li>
-            <li className="border border-[yellow] hover:bg-[yellow] hover:text-black p-1 rounded-sm m-[2px]">
-              <a className="text-2xl text-[yellow] hover:text-black" href="www.google.com">
+            <li className="border border-[#707070] p-1 rounded-sm m-[2px]">
+              <a className="text-2xl" href="www.google.com">
                 <BsWhatsapp />
               </a>
             </li>
@@ -80,7 +80,7 @@ const Footer = () => {
                     <span>{item.post}</span>
                     <span>{item.date}</span>
                   </li>
-                  {item.id === 1 || item.id === 2 ? <hr className="border-white" /> : null}
+                  {item.id === 1 || item.id === 2 ? <hr className="border-[#707070]" /> : null}
                 </>
               );
             })}
@@ -93,7 +93,7 @@ const Footer = () => {
               return (
                 <button
                   key={ind}
-                  className="border border-white hover:border-none px-4 py-1 hover:bg-[yellow] hover:text-black font-bold"
+                  className="border border-[#707070] hover:border-none px-4 py-1 hover:bg-[yellow] hover:text-black font-bold"
                 >
                   {item}
                 </button>
@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
       </Component>
 
-      <div className="text-center bg-[yellow] text-black font-bold py-4 text-xs">
+      <div className="text-center bg-[#1c1c1a] text-[#707070] font-bold py-4 text-xs">
         <span>
           Copyright &copy; 2021 &nbsp;
           <a href="www.google.com">

@@ -138,7 +138,7 @@ const DynamicPricing = () => {
         <PackageTabButtonFormat className="" tab={tab} />
       </div>
 
-      <table className="border border-gray-400 border-collapse table-auto text-center mt-1 sm:w-full">
+      <table className="border border-gray-400 border-collapse table-auto text-center mt-1 w-full">
         <PackageTabTableFormat tab={tab} />
 
         <thead className="border sm:border-t-2">

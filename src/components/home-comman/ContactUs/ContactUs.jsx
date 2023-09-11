@@ -4,6 +4,7 @@ import Textarea from "../../../Utilities/Textarea";
 import Input from "../../../Utilities/Input";
 import Button from "../../../Utilities/Button";
 import spinner from "../../../img/contactUs/spiner.gif";
+import Components from "../../comman/Components";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -44,88 +45,100 @@ function ContactUs() {
 
   return (
     <>
-      <form onSubmit={submitForm}>
-        <div className="px-10 py-28 bg-gray-50 sm:px-0 sm:py-0 md:px-0 md:py-0">
-          <div className="flex flex-col space-y-3 mx-32  sm:mx-10  md:mx-10 font-ligth text-gray-400 text-sm">
-            <div className="flex-1 flex space-x-20 sm:flex-col  sm:space-x-0 sm:space-y-5 md:flex-col  md:space-x-0 md:space-y-5">
-              <div className="w-full">
+      <Components className="bg-[white]">
+        <div className="text-center">
+          <span className="font-bold text-4xl text-gray-500 sm:text-3xl">
+            Contact Us
+          </span>
+          <p className="px-2 mx-auto mt-2 text-gray-500 py-4 text-[14px] font-semibold tracking-tight lg:w-[50%] xl:w-[50%]">
+            Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+            nec sagittis sem nibh id elit.
+          </p>
+        </div>
+        <form onSubmit={submitForm}>
+          <div className="sm:px-0 sm:py-0 md:px-0 md:py-0 mt-5">
+            <div className="flex flex-col space-y-3 sm:mx-10  md:mx-10 font-ligth text-gray-400 text-sm">
+              <div className="flex-1 flex space-x-20 sm:flex-col  sm:space-x-0 sm:space-y-5 md:flex-col  md:space-x-0 md:space-y-5">
+                <div className="w-full">
+                  <Input
+                    className={
+                      "mt-2 py-3 text-left  border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
+                    }
+                    type={"text"}
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                    label={"Your Name(required)"}
+                  />
+                  {empty && (
+                    <p className="text-left text-red-600">this is required*</p>
+                  )}
+                </div>
+                <div className="w-full">
+                  <Input
+                    className={
+                      "mt-2 py-3  text-left  border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
+                    }
+                    type={"email"}
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    label={"Your Email(required)"}
+                  />
+                  {empty && (
+                    <p className="text-left text-red-600">this is required*</p>
+                  )}
+                </div>
+
                 <Input
                   className={
-                    "py-3 text-left  border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
+                    "mt-2 py-3 text-left  border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
                   }
                   type={"text"}
-                  value={name}
+                  value={subject}
                   onChange={(e) => {
-                    setName(e.target.value);
+                    setSubject(e.target.value);
                   }}
-                  label={"Your Name(required)"}
+                  label={"Subject"}
                 />
-                {empty && (
-                  <p className="text-left text-red-600">this is required*</p>
-                )}
               </div>
-              <div className="w-full">
-                <Input
+              <div>
+                <Textarea
                   className={
-                    "py-3  text-left  border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
+                    "mt-2 py-3 p-2   border-2 text-left focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
                   }
-                  type={"email"}
-                  value={email}
+                  type={"text"}
+                  value={message}
+                  rows="4"
                   onChange={(e) => {
-                    setEmail(e.target.value);
+                    setMessage(e.target.value);
                   }}
-                  label={"Your Email(required)"}
+                  label={"Your Message"}
                 />
-                {empty && (
-                  <p className="text-left text-red-600">this is required*</p>
+              </div>
+              <div className="flex  justify-center">
+                <Button
+                  className={
+                    "mt-4 border-2 bg-yellow-500 px-14 py-3 hover:bg-yellow-600 text-white"
+                  }
+                  type={"submit"}
+                  onClick={() => {}}
+                >
+                  send
+                </Button>
+                {loading && (
+                  <div className="px-2">
+                    <img className="h-8" src={spinner}></img>
+                  </div>
                 )}
               </div>
-
-              <Input
-                className={
-                  "py-3 text-left  border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
-                }
-                type={"text"}
-                value={subject}
-                onChange={(e) => {
-                  setSubject(e.target.value);
-                }}
-                label={"Subject"}
-              />
-            </div>
-            <div>
-              <Textarea
-                className={
-                  "py-3 p-2   border-2 text-left focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
-                }
-                type={"text"}
-                value={message}
-                rows="4"
-                onChange={(e) => {
-                  setMessage(e.target.value);
-                }}
-                label={"Your Message"}
-              />
-            </div>
-            <div className="flex  justify-center">
-              <Button
-                className={
-                  "border-2 bg-yellow-500 px-14 py-3 hover:bg-yellow-600 text-white"
-                }
-                type={"submit"}
-                onClick={() => {}}
-              >
-                send
-              </Button>
-              {loading && (
-                <div className="px-2">
-                  <img className="h-8" src={spinner}></img>
-                </div>
-              )}
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </Components>
     </>
   );
 }

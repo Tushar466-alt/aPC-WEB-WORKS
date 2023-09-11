@@ -1,10 +1,10 @@
-import React from 'react'
-import PCComingsoon from './PCComingsoon'
+import React from 'react';
+import GetInTouch from "../components/contactus-comman/GetInTouch"
 
 const PCContactUs = () => {
   return (
     <>
-      <PCComingsoon />
+      <GetInTouch />
     </>
   )
 }
