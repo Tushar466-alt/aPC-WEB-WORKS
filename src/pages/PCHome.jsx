@@ -1,6 +1,6 @@
 import React from "react";
 import Services from "../components/services-common/Services";
-import Footer from "../components/footer/Footer.jsx";
+import ContactUs from "../components/home-comman/ContactUs/ContactUs"
 
 const PCHome = () => {
   return (
@@ -18,7 +18,7 @@ const PCHome = () => {
     <>
       <div>
         <Services />
-        <Footer />
+        <ContactUs />
       </div>
     </>
   );

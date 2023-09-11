@@ -5,6 +5,9 @@ import PCServices from "../pages/PCServices";
 import PCAboutUs from "../pages/PCAboutUs";
 import PCContactUs from "../pages/PCContactUs";
 import PCNavbar from "../components/navbar/PCNavbar";
+import StaticPricingSubPage from "../pages/sub-pages/StaticPricingSubPage";
+import DynamicPricingSubPage from "../pages/sub-pages/DynamicPricingSubPage";
+import EcommercePricingSubPage from "../pages/sub-pages/EcommercePricingSubPage";
 
 const Routing = () => {
   return (
@@ -16,6 +19,12 @@ const Routing = () => {
         <Route path="/services" element={<PCServices />} />
         <Route path="/aboutUs" element={<PCAboutUs />} />
         <Route path="/contactUs" element={<PCContactUs />} />
+        <Route path="/Static Website" element={<StaticPricingSubPage />} />
+        <Route path="/Dynamic Website" element={<DynamicPricingSubPage />} />
+        <Route path="/E-Commerce Website" element={<EcommercePricingSubPage />} />
+        {/* <Route path="/Android App Development" element={} />
+        <Route path="/Logo & Graphic Design" element={} />
+        <Route path="/Bulk Website Design" element={} /> */}
       </Routes>
     </Router>
   );

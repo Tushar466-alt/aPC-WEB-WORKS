@@ -1,7 +1,7 @@
 import React from "react";
 import Components from "../comman/Components"
 
-const StaticPricing = () => {
+const DynamicPricing = () => {
   let formData = [
     {
       id: 1,
@@ -131,14 +131,14 @@ const StaticPricing = () => {
     <>
       <Components className="text-center">
       <span className="font-bold text-3xl text-gray-800 sm:text-xl text-center mt-10">
-        Cost of Static Website Design
+        Cost of Dynamic Website Design
       </span>
 
       <div className="mt-10">
         <PackageTabButtonFormat className="" tab={tab} />
       </div>
 
-      <table className="border border-gray-400 border-collapse table-auto text-center mt-1 w-full">
+      <table className="border border-gray-400 border-collapse table-auto text-center mt-1 sm:w-full">
         <PackageTabTableFormat tab={tab} />
 
         <thead className="border sm:border-t-2">
@@ -148,13 +148,13 @@ const StaticPricing = () => {
             </th>
             <th className="border border-gray-200">2999/-</th>
             <th className="border border-gray-200 sm:hidden md:hidden">
-              4999/-
+              6999/-
             </th>
             <th className="border border-gray-200 sm:hidden md:hidden">
-              19999/-
+              24999/-
             </th>
             <th className="border border-gray-200 sm:hidden md:hidden">
-              29999/-
+              35999/-
             </th>
           </tr>
         </thead>
@@ -230,4 +230,4 @@ let PackageTabButtonFormat = ({ tab }) => {
   );
 };
 
-export default StaticPricing;
+export default DynamicPricing;

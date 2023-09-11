@@ -1,7 +1,7 @@
 import React from "react";
 import Components from "../comman/Components"
 
-const StaticPricing = () => {
+const EcommercePricing = () => {
   let formData = [
     {
       id: 1,
@@ -131,7 +131,7 @@ const StaticPricing = () => {
     <>
       <Components className="text-center">
       <span className="font-bold text-3xl text-gray-800 sm:text-xl text-center mt-10">
-        Cost of Static Website Design
+        Cost of E-Commerce Website Design
       </span>
 
       <div className="mt-10">
@@ -230,4 +230,4 @@ let PackageTabButtonFormat = ({ tab }) => {
   );
 };
 
-export default StaticPricing;
+export default EcommercePricing;
