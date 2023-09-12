@@ -152,7 +152,7 @@ function Auth() {
 
   return (
     <>
-      <div className="container mx-auto h-[600px] w-screen flex flex-col justify-center items-center">
+      <div className="container mx-auto h-screen w-screen flex flex-col justify-center items-center">
         <h2 className="text-2xl font-semibold mb-4">
           {logInMode ? "Log In" : "Create Account"}
         </h2>

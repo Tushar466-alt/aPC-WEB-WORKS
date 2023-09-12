@@ -29,7 +29,7 @@ const PCNavbar = () => {
   ];
   return (
     <>
-      <div className="fixed bg-white text-[#8f8f8f] flex justify-between p-3 md:px-8 md:py-4 items-center lg:py-3 xl:py-4 lg:px-16 xl:px-16 border-b-2 w-screen">
+      <div className="fixed top-0 bg-white text-[#8f8f8f] flex justify-between p-3 md:px-8 md:py-4 items-center lg:py-3 xl:py-4 lg:px-16 xl:px-16 border-b-2 w-screen">
         <div className="flex justify-between w-[80%]">
           <div className="text-md block lg:hidden xl:hidden">
             {isToggle ? (

@@ -9,6 +9,7 @@ import {
   LuMessagesSquare,
 } from "react-icons/lu";
 // import StaticPricingSubPage from "./sub-pages/StaticPricingSubPage";
+import { motion } from "framer-motion";
 
 const ServicesSub = () => {
   let data = [
@@ -58,7 +59,13 @@ const ServicesSub = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 py-10 gap-2 lg:gap-x-0 xl:gap-x-6 justify-items-center items-center md:grid-cols-2 gap-y-10 lg:grid-cols-3 lg:gap-2 lg:px-6 xl:grid-cols-3 xl:px-12 sm:px-4 md:px-4 bg-white">
+      <motion.div
+        className="grid grid-cols-1 py-10 gap-2 lg:gap-x-0 xl:gap-x-6 justify-items-center items-center md:grid-cols-2 gap-y-10 lg:grid-cols-3 lg:gap-2 lg:px-6 xl:grid-cols-3 xl:px-12 sm:px-4 md:px-4 bg-white"
+        initial={{ opacity: 0, y: -20 }} // Initial animation state (hidden)
+        animate={{ opacity: 1, y: 0 }} // Animation on page load
+        exit={{ opacity: 0, y: -20 }} // Animation on exit (if used in a route transition)
+        transition={{ duration: 0.5 }} // Animation duration
+      >
         {data?.map((item, ind) => {
           return (
             <div key={ind}>
@@ -84,7 +91,7 @@ const ServicesSub = () => {
             </div>
           );
         })}
-      </div>
+      </motion.div>
 
       {/* <div className="grid grid-rows-2 py-10 sm:px-4 md:px-4 lg:px-14 xl:px-14 bg-[black]">
         <div className="text-center">
@@ -109,4 +116,3 @@ const ServicesSub = () => {
 };
 
 export default ServicesSub;
-
