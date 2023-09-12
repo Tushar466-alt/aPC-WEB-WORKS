@@ -5,9 +5,9 @@ function WeDo() {
   return (
     <>
       <Components className="flex bg-[#fafafa] text-[#707070] text-left sm:px-0  sm:flex-col sm:py-12 md:px-0  md:flex-col md:py-12">
-        <div className="space-y-4 pr-10 w-4/5  sm:px-3 text-justify sm:w-full md:px-8 ] md:w-full animate-bounceInLeft">
+        <div className="items-center space-y-4 pr-10 w-4/5  sm:px-3 text-justify sm:w-full md:px-8 ] md:w-full animate-bounceInLeft">
           <span className="text-2xl font-bold">What We Do ?</span>
-          <p className="">
+          <p className="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

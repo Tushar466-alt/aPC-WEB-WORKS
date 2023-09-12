@@ -4,7 +4,7 @@ import ContactUs from "../components/home-comman/ContactUs/ContactUs"
 import Map from ".././components/map/Map"
 import Welcome from "../components/welcomPage/Welcom";
 // import OurSkills from "../components/welcomPage/OurSkills"
-import WeDo from "../components/welcomPage/WeDo"
+import WeDo from "../components/welcomPage/WeDo";
 
 const PCHome = () => {
   return (
