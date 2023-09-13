@@ -129,7 +129,6 @@ function Auth() {
     username: "",
     contact: "",
     email: "",
-    password: "",
     confirmPassword: "",
   });
 
@@ -141,42 +140,28 @@ function Auth() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const dataToSend = { username: formData.username };
-
-    if (!logInMode) {
-      dataToSend.confirmPassword = formData.confirmPassword;
-      dataToSend.email = formData.email;
-      dataToSend.contact = formData.contact;
-    } else {
-      dataToSend.password = formData.password;
-      if (formData.password === formData.confirmPassword) {
-        try {
-          // Send the formData to the API using Axios
-          const response = axios.post(
-            "http://192.168.29.20:3000/api/v1/createUser",
-            formData
-          );
-
-          console.log("API Response:", response.data);
-          // Handle success response from the API
-        } catch (error) {
-          console.error("API Error:", error);
-          // Handle error response from the API
-        }
-      } 
-    }
 
     if (logInMode) {
-      console.log("Logging in with data:", dataToSend);
+      console.log("Logging in with data:", formData);
       // Add your login logic here
     } else {
-      console.log("Signing up with data:", dataToSend);
-      // Add your sign-up logic here
+      try {
+        // Send the formData to the API using Axios
+        const response = await axios.post(
+          "http://192.168.29.20:3000/api/v1/createUser",
+          formData
+        );
+
+        console.log("API Response:", response.data);
+        alert("Form Submitted");
+        // Handle success response from the API
+      } catch (error) {
+        console.error("API Error:", error);
+        // Handle error response from the API
+      }
     }
-
-
   };
 
   return (
