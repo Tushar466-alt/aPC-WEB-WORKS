@@ -29,7 +29,7 @@ const PCNavbar = () => {
   ];
   return (
     <>
-      <div className="fixed top-0 bg-white text-[#8f8f8f] flex justify-between p-3 md:px-8 md:py-4 items-center lg:py-3 xl:py-4 lg:px-16 xl:px-16 border-b-2 w-screen">
+      <div className="sticky top-0 bg-white text-[#8f8f8f] flex justify-between p-3 md:px-8 md:py-4 items-center lg:py-3 xl:py-4 lg:px-16 xl:px-16 border-b-2 w-screen">
         <div className="flex justify-between w-[80%]">
           <div className="text-md block lg:hidden xl:hidden">
             {isToggle ? (
@@ -86,15 +86,16 @@ const PCNavbar = () => {
 
         <div className="flex justify-evenly w-[20%]">
           <div class="w-[0.2px] h-12 bg-gray-500 sm:hidden"></div>
-          <div className="flex flex-col items-center">
-            <Link to="/auth-ls">
+          <Link to="/auth-ls">
+            <div className="flex flex-col items-center">
               <RiAccountPinCircleLine className="text-2xl sm:text-2xl sm:mt-[-3px] cursor-pointer" />
-            </Link>
-            {/* <span className="text-xs mt-1">
+
+              {/* <span className="text-xs mt-1">
               <span className="font-bold"> Hello,</span>User Name
             </span> */}
-            <span className="text-xs mt-1">Login</span>
-          </div>
+              <span className="text-xs mt-1">Login</span>
+            </div>
+          </Link>
         </div>
       </div>
     </>

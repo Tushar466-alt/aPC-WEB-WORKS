@@ -120,14 +120,16 @@
 import React, { useState } from "react";
 import Input from "../../Utilities/Input";
 import Button from "../../Utilities/Button";
+import axios from "axios";
 
 function Auth() {
   const [logInMode, setLogInMode] = useState(true); // Default to login mode
 
   const [formData, setFormData] = useState({
     username: "",
-    password: "",
+    contact: "",
     email: "",
+    password: "",
     confirmPassword: "",
   });
 
@@ -141,13 +143,40 @@ function Auth() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const dataToSend = { username: formData.username };
+
+    if (!logInMode) {
+      dataToSend.confirmPassword = formData.confirmPassword;
+      dataToSend.email = formData.email;
+      dataToSend.contact = formData.contact;
+    } else {
+      dataToSend.password = formData.password;
+      if (formData.password === formData.confirmPassword) {
+        try {
+          // Send the formData to the API using Axios
+          const response = axios.post(
+            "http://192.168.29.20:3000/api/v1/createUser",
+            formData
+          );
+
+          console.log("API Response:", response.data);
+          // Handle success response from the API
+        } catch (error) {
+          console.error("API Error:", error);
+          // Handle error response from the API
+        }
+      } 
+    }
+
     if (logInMode) {
-      console.log("Logging in with data:", formData);
+      console.log("Logging in with data:", dataToSend);
       // Add your login logic here
     } else {
-      console.log("Signing up with data:", formData);
+      console.log("Signing up with data:", dataToSend);
       // Add your sign-up logic here
     }
+
+
   };
 
   return (
@@ -179,6 +208,26 @@ function Auth() {
               />
             </div>
           )}
+
+          {!logInMode && (
+            <div className="mb-4">
+              <label
+                htmlFor="username"
+                className="block text-gray-700 font-medium mb-2"
+              >
+                Contact No.
+              </label>
+              <Input
+                type="number"
+                id="contact"
+                name="contact"
+                value={formData.contact}
+                onChange={handleChange}
+                className="py-2 text-left border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
+                required
+              />
+            </div>
+          )}
           <div className="mb-4">
             <label
               htmlFor="username"
@@ -196,6 +245,7 @@ function Auth() {
               required
             />
           </div>
+
           <div className="mb-4">
             <label
               htmlFor="password"

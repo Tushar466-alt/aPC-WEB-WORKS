@@ -1,5 +1,5 @@
 import React from "react";
-import Components from "../comman/Components"
+import Components from "../comman/Components";
 
 const DynamicPricing = () => {
   let formData = [
@@ -129,105 +129,108 @@ const DynamicPricing = () => {
   // const filteredData = formData.filter((item) => item === selectedTab);
   return (
     <>
-      <Components className="text-center">
-      <span className="font-bold text-3xl text-gray-800 sm:text-xl text-center mt-10">
-        Cost of Dynamic Website Design
-      </span>
+      <div className="text-center">
+        <span className="font-bold text-3xl text-gray-800 sm:text-xl text-center mt-10">
+          Cost of Dynamic Website Design
+        </span>
 
-      <div className="mt-10">
-        <PackageTabButtonFormat className="" tab={tab} />
-      </div>
+        {/* <div className="mt-10">
+          <PackageTabButtonFormat className="" tab={tab} />
+        </div> */}
 
-      <table className="border border-gray-400 border-collapse table-auto text-center mt-1 w-full">
-        <PackageTabTableFormat tab={tab} />
-
-        <thead className="border sm:border-t-2">
-          <tr>
-            <th className="border border-gray-200 text-left py-3 px-2">
-              Price
-            </th>
-            <th className="border border-gray-200">2999/-</th>
-            <th className="border border-gray-200 sm:hidden md:hidden">
-              6999/-
-            </th>
-            <th className="border border-gray-200 sm:hidden md:hidden">
-              24999/-
-            </th>
-            <th className="border border-gray-200 sm:hidden md:hidden">
-              35999/-
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="bg-[yellow]">
-            <th
-              className="border border-gray-200 text-left py-4 px-2"
-              colSpan="5"
-            >
-              <span>Get started easily</span>
-            </th>
-          </tr>
-          {formData?.map((item, ind) => {
-            return (
-              <tr key={ind} className="font-medium text-xs hover:bg-gray-100">
-                <td className="border border-gray-200 text-left py-3 px-2">
-                  {item.title}
-                </td>
-                <td className="border border-gray-200">{item.basic}</td>
-                <td className="border border-gray-200 sm:hidden md:hidden">
-                  {item.corporate}
-                </td>
-                <td className="border border-gray-200 sm:hidden md:hidden">
-                  {item.creative}
-                </td>
-                <td className="border border-gray-200 sm:hidden md:hidden">
-                  {item.extraCreative}
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      </Components>
-    </>
-  );
-};
-
-let PackageTabTableFormat = ({ tab }) => {
-  return (
-    <>
-      <thead className="sm:hidden">
-        <tr className="bg-[#ffff0023]">
-          <th className="border border-gray-200 text-left py-3 px-2 sm:hidden lg:w-[25%] zl:w-[25%]">
-            Packeges
-          </th>
-          {tab?.map((item, ind) => {
-            return (
-              <th className="border border-gray-200 sm:w-[25%] md:w-[25%] w-[15%] sm:text-sm sm:py-1">
-                {item}
+        <table className="border border-gray-400 border-collapse table-auto text-center mt-6 w-full">
+          <thead>
+            <tr className="bg-[#ffff0023]">
+              <th className="border border-gray-200 text-left py-3 px-2">
+                Packeges
               </th>
-            );
-          })}
-        </tr>
-      </thead>
-    </>
-  );
-};
+              {tab?.map((item, ind) => {
+                return (
+                  <th className="border border-gray-200 sm:text-sm sm:py-1">
+                    {item}
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
 
-let PackageTabButtonFormat = ({ tab }) => {
-  return (
-    <>
-      <div className="flex justify-between lg:hidden xl:hidden ">
-        {tab?.map((item, ind) => {
-          return (
-            <button className="bg-gray-300 py-[3px] sm:w-[25%] md:w-[25%] w-[15%] font-bold">
-              {item}
-            </button>
-          );
-        })}
+          <thead className="border sm:border-t-2">
+            <tr>
+              <th className="border border-gray-200 text-left py-3 px-2">
+                Price
+              </th>
+              <th className="border border-gray-200">2999/-</th>
+              <th className="border border-gray-200">6999/-</th>
+              <th className="border border-gray-200">24999/-</th>
+              <th className="border border-gray-200">35999/-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-[yellow]">
+              <th
+                className="border border-gray-200 text-left py-4 px-2"
+                colSpan="5"
+              >
+                <span>Get started easily</span>
+              </th>
+            </tr>
+            {formData?.map((item, ind) => {
+              return (
+                <tr key={ind} className="font-medium text-xs hover:bg-gray-100">
+                  <td className="border border-gray-200 text-left py-3 px-2">
+                    {item.title}
+                  </td>
+                  <td className="border border-gray-200">{item.basic}</td>
+                  <td className="border border-gray-200">{item.corporate}</td>
+                  <td className="border border-gray-200">{item.creative}</td>
+                  <td className="border border-gray-200">
+                    {item.extraCreative}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </>
   );
 };
+
+// let PackageTabTableFormat = ({ tab }) => {
+//   return (
+//     <>
+//       <thead className="sm:hidden">
+//         <tr className="bg-[#ffff0023]">
+//           <th className="border border-gray-200 text-left py-3 px-2 sm:hidden lg:w-[25%] zl:w-[25%]">
+//             Packeges
+//           </th>
+//           {tab?.map((item, ind) => {
+//             return (
+//               <th className="border border-gray-200 sm:w-[25%] md:w-[25%] w-[15%] sm:text-sm sm:py-1">
+//                 {item}
+//               </th>
+//             );
+//           })}
+//         </tr>
+//       </thead>
+//     </>
+//   );
+// };
+
+// let PackageTabButtonFormat = ({ tab }) => {
+//   return (
+//     <>
+//       <div className="flex justify-between lg:hidden xl:hidden ">
+//         {tab?.map((item, ind) => {
+//           return (
+//             <button className="bg-gray-300 py-[3px] sm:w-[25%] md:w-[25%] w-[15%] font-bold">
+//               {item}
+//             </button>
+//           );
+//         })}
+//       </div>
+//     </>
+//   );
+// };
 
 export default DynamicPricing;

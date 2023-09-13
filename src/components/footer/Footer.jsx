@@ -93,7 +93,7 @@ const Footer = () => {
               return (
                 <button
                   key={ind}
-                  className="border border-[#707070] hover:border-none px-4 py-1 hover:bg-[yellow] hover:text-black font-bold"
+                  className="border border-[#707070] px-4 py-1 font-bold"
                 >
                   {item}
                 </button>

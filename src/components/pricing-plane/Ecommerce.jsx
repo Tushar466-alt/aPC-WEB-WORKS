@@ -147,13 +147,13 @@ const EcommercePricing = () => {
               Price
             </th>
             <th className="border border-gray-200">2999/-</th>
-            <th className="border border-gray-200 sm:hidden md:hidden">
+            <th className="border border-gray-200">
               4999/-
             </th>
-            <th className="border border-gray-200 sm:hidden md:hidden">
+            <th className="border border-gray-200">
               19999/-
             </th>
-            <th className="border border-gray-200 sm:hidden md:hidden">
+            <th className="border border-gray-200">
               29999/-
             </th>
           </tr>
@@ -174,13 +174,13 @@ const EcommercePricing = () => {
                   {item.title}
                 </td>
                 <td className="border border-gray-200">{item.basic}</td>
-                <td className="border border-gray-200 sm:hidden md:hidden">
+                <td className="border border-gray-200">
                   {item.corporate}
                 </td>
-                <td className="border border-gray-200 sm:hidden md:hidden">
+                <td className="border border-gray-200">
                   {item.creative}
                 </td>
-                <td className="border border-gray-200 sm:hidden md:hidden">
+                <td className="border border-gray-200">
                   {item.extraCreative}
                 </td>
               </tr>

@@ -5,7 +5,7 @@ function WeDo() {
   return (
     <>
       <Components className="flex bg-[#fafafa] text-[#707070] text-left sm:px-0  sm:flex-col sm:py-12 md:px-0  md:flex-col md:py-12">
-        <div className="items-center space-y-4 pr-10 w-4/5  sm:px-3 text-justify sm:w-full md:px-8 ] md:w-full animate-bounceInLeft">
+        <div className="flex flex-col justify-center space-y-4 pr-10 w-4/5  sm:px-3 text-justify sm:w-full md:px-8 ] md:w-full animate-bounceInLeft">
           <span className="text-2xl font-bold">What We Do ?</span>
           <p className="text-sm">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -24,10 +24,10 @@ function WeDo() {
           </div>
         </div>
         <div>
-          <div className="sm:pt-4 md:pt-4 flex justify-center animate-bounceInRight">
+          <div className="sm:pt-4 md:pt-4 flex justify-center sm:mt-10 md:mt-10 animate-bounceInRight">
             <img
               src="https://okab.pixeldima.com/wp-content/uploads/2016/05/ipad-air.png"
-              className="sm:px-8  sm:mr-10 md:px-8  md:mr-10"
+              className=""
             />
           </div>
         </div>
