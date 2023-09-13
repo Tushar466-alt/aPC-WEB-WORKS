@@ -56,14 +56,14 @@ function ContactUs() {
             nec sagittis sem nibh id elit.
           </p>
         </div>
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} className="lg:w-[70%] xl:w-[70%] mx-auto">
           <div className="sm:px-0 sm:py-0 md:px-0 md:py-0 mt-5">
             <div className="flex flex-col space-y-3 sm:mx-10  md:mx-10 text-gray-400 text-sm">
               <div className="flex-1 flex space-x-20 sm:flex-col  sm:space-x-0 sm:space-y-5 md:flex-col  md:space-x-0 md:space-y-5">
                 <div className="w-full">
                   <Input
                     className={
-                      "mt-2 py-3 text-left  border-2 focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
+                      "mt-2 py-1 text-left  border-2 focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
                     }
                     type={"text"}
                     value={name}
@@ -79,7 +79,7 @@ function ContactUs() {
                 <div className="w-full">
                   <Input
                     className={
-                      "mt-2 py-3  text-left  border-2 focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
+                      "mt-2 py-1  text-left  border-2 focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
                     }
                     type={"email"}
                     value={email}
@@ -95,7 +95,7 @@ function ContactUs() {
 
                 <Input
                   className={
-                    "mt-2 py-3 text-left  border-2 focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
+                    "mt-2 py-1 text-left  border-2 focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
                   }
                   type={"text"}
                   value={subject}
@@ -108,7 +108,7 @@ function ContactUs() {
               <div>
                 <Textarea
                   className={
-                    "mt-2 py-3 p-2   border-2 text-left focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
+                    "mt-2 py-1 p-2   border-2 text-left focus:border-l-8 focus:border-[#ff5733] border-gray-200 outline-[#ff5733] transition-all duration-500"
                   }
                   type={"text"}
                   value={message}
