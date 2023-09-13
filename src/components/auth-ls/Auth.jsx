@@ -123,12 +123,14 @@ import Button from "../../Utilities/Button";
 import axios from "axios";
 
 function Auth() {
-  const [logInMode, setLogInMode] = useState(true); // Default to login mode
+  const [logInMode, setLogInMode] = useState(true);
+  const [passwordMatchError, setPasswordMatchError] = useState(false);
 
   const [formData, setFormData] = useState({
     username: "",
     contact: "",
     email: "",
+    password: "",
     confirmPassword: "",
   });
 
@@ -138,29 +140,42 @@ function Auth() {
       ...formData,
       [name]: value,
     });
+
+    if (name === "password" || name === "confirmPassword") {
+      setPasswordMatchError(false);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (logInMode) {
-      console.log("Logging in with data:", formData);
-      // Add your login logic here
-    } else {
+    // Check if passwords match
+    if (formData.password === formData.confirmPassword) {
       try {
-        // Send the formData to the API using Axios
-        const response = await axios.post(
-          "http://192.168.29.20:3000/api/v1/createUser",
-          formData
-        );
+        // Create a new object with the specific fields to send to the API
+        const formDataToSend = {
+          username: formData.username,
+          contact: formData.contact,
+          email: formData.email,
+          confirmPassword: formData.confirmPassword,
+        };
 
-        console.log("API Response:", response.data);
+        // Send the formDataToSend to the API using Axios
+        const response = await axios.post(
+          "",
+          formDataToSend
+        );
+        console.log("Sent Data", formDataToSend);
+        // console.log("API Response:", response.data);
         alert("Form Submitted");
         // Handle success response from the API
       } catch (error) {
         console.error("API Error:", error);
         // Handle error response from the API
       }
+    } else {
+      // Passwords don't match, set the error
+      setPasswordMatchError(true);
     }
   };
 
@@ -265,6 +280,9 @@ function Auth() {
                 className="py-2 text-left border-2 focus:border-l-8 focus:border-yellow-400 border-gray-200 outline-yellow-400 transition-all duration-500"
                 required
               />
+              {passwordMatchError && (
+                <p className="text-red-500">Passwords do not match.</p>
+              )}
             </div>
           )}
           <div className="w-full flex justify-evenly mt-10">
