@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LuAlignJustify, LuX } from "react-icons/lu";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 
 const PCNavbar = () => {
   const [isToggle, setIsToggle] = useState(false);
-
   const toggleSideBar = () => {
     setIsToggle(!isToggle);
 
@@ -46,10 +45,12 @@ const PCNavbar = () => {
           </div>
 
           <div className="text-2xl sm:text-lg lg:font-extrabold xl:font-extrabold sm:mr-10 sm:mt-1">
-            <span className="font-bold">
-              <sup>a</sup>
-              <span>PC WEB WORKS</span>
-            </span>
+            <Link to='/'>
+              <span className="font-bold">
+                <sup>a</sup>
+                <span>PC WEB WORKS</span>
+              </span>
+            </Link>
           </div>
 
           <nav

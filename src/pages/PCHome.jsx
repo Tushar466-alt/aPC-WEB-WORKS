@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Services from "../components/home-comman/Services";
 import ContactUs from "../components/home-comman/ContactUs/ContactUs"
 import Map from ".././components/map/Map"
@@ -7,6 +7,9 @@ import Welcome from "../components/welcomPage/Welcom";
 import WeDo from "../components/welcomPage/WeDo";
 
 const PCHome = () => {
+  useEffect(() => {
+    window.scrollTo(0,0);
+  })
   return (
     // <motion.div
     // initial = {{opacity: 0}}

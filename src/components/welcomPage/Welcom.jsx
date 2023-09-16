@@ -1,7 +1,12 @@
 import React from "react";
 import Button from "../../Utilities/Button";
+import { useNavigate } from "react-router-dom";
 
-function Welcome() {
+const Welcome = () => {
+  const Navigate = useNavigate();
+  function viewPlan() {
+    Navigate("/services");
+  }
   return (
     <>
       <div className='bg-[url("https://okab.pixeldima.com/wp-content/uploads/2016/06/Scene-01.jpg")] bg-center h-screen flex flex-col justify-center text-black'>
@@ -22,7 +27,7 @@ function Welcome() {
             <Button className="border border-[#707070] px-5 py-3 font-bold text-[#707070] mx-2 hover:bg:[#ff5733]">
               View Demo
             </Button>
-            <Button className="border border-[#707070] px-5 py-3 font-bold text-[#707070] mx-2 hover:bg:[#ff5733]">
+            <Button className="border border-[#707070] px-5 py-3 font-bold text-[#707070] mx-2 hover:bg:[#ff5733]" onClick={viewPlan}>
               View Plans
             </Button>
           </div>
@@ -30,6 +35,6 @@ function Welcome() {
       </div>
     </>
   );
-}
+};
 
 export default Welcome;
